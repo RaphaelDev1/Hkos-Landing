@@ -1,0 +1,185 @@
+      <style>
+
+        *{
+            font-size: 8px;
+
+          }
+        header
+        {
+            height: 200px;
+            position: relative;
+            
+        }
+
+        table, th, td 
+        {
+            /* border: 1px solid #aaa; */
+            border-collapse: collapse;
+            
+        }
+
+        table
+        {
+            width: 100%;
+        }
+
+        th, td 
+        {
+            padding: 2px 4px 2px 4px;
+        }
+
+        th 
+        {
+            background: #bbb;
+            color: black;
+            font-weight: bold;
+            min-height: 100px;
+        }
+
+        td{
+            height: 14px;
+        }
+
+        /* tr:nth-of-type(odd)
+        {
+            background: #bbb;
+        } */
+
+        .blockclient
+        {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+        }
+        .blockinfo{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        ul{
+            list-style: none;
+        }
+
+        .facturenet{
+            margin-top: 20px;
+            width: 150px;
+        }
+
+        .footerinfo2{
+            margin-top: 80px;
+        }
+
+        .footerinfo3{
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .alleft{
+           text-align: left; 
+        }
+
+        .alright{
+            text-align: right;
+        }
+      </style>
+
+      <header>
+
+        <img src="{{ this.logo }}" width="100px" alt="">
+
+        <div class="blockcompany">
+            <ul class=" borderß">
+                <li class="mb-2"></li>
+                <li><h5>{{this.name}} My Name</h5></li>
+                 <li>{{this.adresse}} {{this.codepostale}} {{this.ville}}My Adress</li>
+                 <li>{{this.pays}} My city</li>
+                 <li>{{this.code}} {{this.telephone}} Me tel</li>
+                 <li>{{this.email}} My e-mail</li>
+                 </ul>
+
+        </div>
+
+        <div class="blockclient">
+            <ul class="alright">
+                <li><h5>{{this.clientname}}Client</h5></li>
+                 <li>{{this.clientadresse}} {{this.clientcodepostale}} {{this.clientville}}Client Adress</li>
+                 <li>{{this.clientpays}} Client City</li>
+                 <li>{{this.clientcode}} {{this.clienttelephone}} Client Tel</li>
+                 <li>{{this.clientemail}} Client Mail</li>
+                 </ul>
+        </div>
+
+        <div class="blockinfo alright">
+            <ul>
+                <li>Numéro de facture : {{this.facturenum}}</li>
+                <li style="font-weight: bold;">Date : {{this.facturedata}}</li>
+                <li style="font-weight: bold;">Date de validité : {{this.facturedata}}</li>
+            </ul>
+
+
+        </div>
+
+
+      </header>
+
+      <body>
+
+
+      <table>
+          <tr>
+              <th width="150px" class="alleft">Description</th>
+              <th class="alright">Date</th>
+              <th class="alright">Unité</th>
+              <th class="alright">Quantité</th>
+              <th class="alright">Prix Unitaire HT(€)</th>
+              <th class="alright">TVA(%)</th>
+              <th width="50px" class="alright">Total TTC(€)</th>
+          </tr>
+
+          {{#each table}}
+
+          <tr>
+              <td class="alleft">{{this.product}}</td>
+              <td class="alright">{{this.dateproduct}}</td>
+              <td class="alright">{{this.uniteproduct}}</td>
+              <td class="alright">{{this.quantiteproduct}}</td>
+              <td class="alright">{{this.htprixproduct}}</td>
+              <td class="alright">{{this.tvaproduct}}</td>
+              <td class="alright">{{this.montantproduct}}</td>
+          </tr>
+
+          {{/each}}
+
+      </table>
+
+      <hr style="color: grey;">
+
+     <div class="facturenet" style="margin-left: 370px;">
+      <table>
+            <tr>
+              <th width="80px" style="text-align: left; color: black; background-color: white; font-weight: 400;" >Montant Total HT (€)</th>
+              <th width="50px" style="text-align: right; color: black; background-color: white;font-weight: 400; " > {{this.totalht}}</th>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid grey;"> TVA (%)</td>
+                <td  class="alright" style="border-bottom: 1px solid grey;">{{this.totalttc}}</td>
+            </tr>
+            <tr>
+                <td style="font-size:10px ; font-weight: bolder;"> Total TTC (€)</td>
+                <td class="alright";style="font-size:10px ; font-weight: bolder;"> {{this.totalttc}}</td>
+            </tr>
+
+      </table>
+    </div>
+
+
+    
+    <div class="footerinfo2"> 
+        <div><span style="font-size: 12px; font-weight: bold;">Date et signature du cleint :  </span></div>
+        <div>(Précédée de le mention "Bon pour accord") </div>
+    </div>
+
+    </body>
+
+

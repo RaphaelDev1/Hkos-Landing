@@ -6,8 +6,8 @@
     </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col-md">
+            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col-lg">
                     <h5 class="text4"> Produit</h5>
                         <div class="d-flex flex-column">
                             <a class="footerlink" href="#devisfacture">Devis</a>
@@ -20,7 +20,7 @@
 
 
         
-                <div class="col-md">
+                <div class="col-lg">
                     <h5 class="text4"> Entreprise</h5>
                         <div class="d-flex flex-column">
                             <a class="footerlink" href="#4">Digitalisation</a>
@@ -32,7 +32,7 @@
            
 
             
-                <div class="col-md">
+                <div class="col-lg">
                     <h5 class="text4"> Langues</h5>
                         <div class="d-flex flex-column">
                             <a class="footerlink" href="#">Francais</a>
@@ -40,7 +40,7 @@
                         </div>
                 </div>
 
-                <div class="col-md">
+                <div class="col-lg">
                     <h5 class="text4"> Suivez-nous</h5>
                         <div class="d-flex flex-column">
                             <a class="footerlink" href="https://www.linkedin.com/in/hkos-solutions-72814b240/">Linkeldn</a>
