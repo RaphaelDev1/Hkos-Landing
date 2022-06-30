@@ -20,7 +20,6 @@
             class="form-control"
             v-model="form.facturenum"
             type="number"
-            readonly="readonly"
             placeholder="1"
           />
         </div>
@@ -30,14 +29,6 @@
           <input class="form-control" v-model="form.facturedate" type="date" />
         </div>
 
-        <div class="pb-2">
-          <label class="form-label">Mode de réglement</label>
-          <input
-            class="form-control"
-            v-model="form.modereglement"
-            type="text"
-          />
-        </div>
 
         <div class="pb-2">
           <label class="form-label">Date limite de réglement </label>
@@ -155,7 +146,7 @@
     </div>
   </div>
 
-  <a href="../../../server/output.pdf" v-if="status">Download</a>
+  <a href="../../../server/output.pdf" download="" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -196,7 +187,6 @@ export default {
       form: {
         facturenum: "",
         facturedate: "",
-        modereglement: "",
         limitedate: "",
         messagefacture: "",
         table: [new TableRow()],

@@ -30,14 +30,6 @@
           <input class="form-control" v-model="form.facturedate" type="date" />
         </div>
 
-        <div class="pb-2">
-          <label class="form-label">Mode de réglement</label>
-          <input
-            class="form-control"
-            v-model="form.modereglement"
-            type="text"
-          />
-        </div>
 
         <div class="pb-2">
           <label class="form-label">Date limite de réglement </label>
@@ -196,7 +188,6 @@ export default {
       form: {
         facturenum: "",
         facturedate: "",
-        modereglement: "",
         limitedate: "",
         messagefacture: "",
         table: [new TableRow()],

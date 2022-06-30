@@ -22,6 +22,8 @@
                     <div class="devisline mt-4" style="    border-bottom: 1px solid grey;">
                       <div class="devislineblock"><p class="devistext1">Numero</p></div>
 
+                       <div class="devislineblock"><p class="devistext1">Statut</p></div>
+
                       <div class="devislineblock"><p class="devistext1">Date</p></div>
 
                       <div class="devislineblock"><p class="devistext1">Client</p></div>
@@ -33,6 +35,8 @@
 
                     <div class="devisline mt-4">
                       <div class="devislineblock"><p class="devistext2">123-345-123</p></div>
+
+                       <div class="devislineblock"><p class="devistext2">Brouillon</p></div>
 
                       <div class="devislineblock"><p class="devistext2">01-06-2022</p></div>
 

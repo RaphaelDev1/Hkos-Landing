@@ -10,6 +10,7 @@ import MenuInscription from '../components/headers/MenuInscription.vue'
 
 
 
+
 export default {
   name: 'HomeView',
 

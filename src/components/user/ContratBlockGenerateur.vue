@@ -9,7 +9,7 @@
 
         <div class="pb-2">
           <label class="form-label">Nom</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratname" type="text" />
         </div>
 
         <div class="pb-2">
@@ -109,7 +109,7 @@
 
   </div>
 
-  <a href="/output.pdf" v-if="status">Download</a>
+  <a href="/output.pdf" download="" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -128,18 +128,9 @@
 </template>
 
 <script>
-class TableRow {
-  product = "";
-  dateproduct = "";
-  uniteproduct = "";
-  quantiteproduct = "";
-  htprixproduct = "";
-  tvaproduct = "";
-  montantproduct = "";
-}
 
 export default {
-  name: "DevisBlockGenerateur",
+  name: "ContratBlockGenerateur",
   props: {
     msg: String,
   },
@@ -148,21 +139,13 @@ export default {
     return {
       status: false,
       form: {
-        facturenum: "",
-        facturedate: "",
-        modereglement: "",
-        limitedate: "",
-        messagefacture: "",
-        table: [new TableRow()],
+        contratname: "",
       },
     };
   },
   methods: {
-    addRow() {
-      this.form.table.push(new TableRow());
-    },
     async sendForm() {
-      let res = await fetch("http://localhost:6300/save", {
+      let res = await fetch("http://localhost:6300/save-doc", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

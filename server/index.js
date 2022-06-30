@@ -14,18 +14,6 @@ const port = process.env.PORT || 6300
 app.use(express.json());
 app.use(cors());
 
-
-// app.use('/', express.static(__dirname + '/'))
-
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/html/page.html');
-// });
-
-// app.get('/save', (req, res) => {
-
-//     res.render('save', { qs: req, query });
-// });
-
 app.post('/save', function (req, res) {
 
     console.log(req.body);
@@ -121,7 +109,10 @@ app.post('/save', function (req, res) {
                 messagefacture: body.messagefacture,
                 limitedate: body.limitedate,
                 modereglement: body.modereglement,
-                table: req.body.table
+                table: req.body.table,
+
+                
+                contratname: body.contratname,
             },
             path: "./output.pdf",
             type: "",
