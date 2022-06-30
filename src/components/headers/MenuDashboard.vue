@@ -34,8 +34,9 @@
       </ul>
 
       <ul class="menuul navbar-nav">
-        <button
+        <router-link
           class="btn btn2"
+          to="/"
           style="
             background-color: rgb(255, 255, 255);
             color: rgb(50, 141, 245);
@@ -45,7 +46,7 @@
           "
         >
           Déconnexion
-        </button>
+        </router-link>
         <button
           class="btn btn2"
           style="

@@ -55,7 +55,7 @@
             padding: 4px 16px;
             margin: 8px;
           "
-          to="/newaccount"
+          to="/new-account"
         >
           Créer un compte</router-link
         >
@@ -83,7 +83,7 @@
 
         <div class="p-2 d-flex justify-content-center border">
             <router-link class="btn btn-light btn2 me-2 ms-5" style="background-color: rgb(255, 255, 255); padding: 4px 16px; margin: 8px; border: 1px solid rgb(197, 194, 194);" to="/connection"> Connexion</router-link>
-            <router-link class="btn btn2" style="background-color: rgb(27, 179, 27); color: white; padding: 4px 16px; margin: 8px;" to="/newaccount"> Créer un compte</router-link>
+            <router-link class="btn btn2" style="background-color: rgb(27, 179, 27); color: white; padding: 4px 16px; margin: 8px;" to="/new-account"> Créer un compte</router-link>
         </div>
       </div>
       </div>

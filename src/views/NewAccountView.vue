@@ -1,12 +1,12 @@
 <template>
-  <MenuInscription/>
+  <MenuConnection/>
   <RegistrationBlock/>
 
 </template>
 
 <script>
 import RegistrationBlock from '../components/user/RegistrationBlock.vue'
-import MenuInscription from '../components/headers/MenuInscription.vue'
+import MenuConnection from '../components/headers/MenuConnection.vue'
 
 
 
@@ -21,7 +21,7 @@ export default {
 
   components: {
     RegistrationBlock,
-    MenuInscription,
+    MenuConnection,
 
   }
 }

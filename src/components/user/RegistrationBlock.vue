@@ -53,8 +53,14 @@
 
 
       </div>
+
+            
     </div>
   </div>
+
+  <div class="d-flex justify-content-center">
+    <router-link class="btn btn-primary mb-4"   to=""> Créer mon compte Hkos</router-link>
+</div>
 </template>
 
 <script>

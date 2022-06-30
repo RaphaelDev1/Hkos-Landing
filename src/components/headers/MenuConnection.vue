@@ -15,16 +15,15 @@
                   <ul class="menuul navbar-nav">
 
                     
-                    <router-link class="btn btn-success btn2" style="background-color: rgb(27, 179, 27); color: white; padding: 4px 16px; margin: 8px;" to="/new-account"> Créer un compte</router-link>
+                    <router-link class="btn btn-success btn2" style="background-color: rgb(27, 179, 27); color: white; padding: 4px 16px; margin: 8px;" to="/connection"> Connection</router-link>
  
 
                 </ul>
                 </div>
               </nav>
- 
- 
- 
- <div
+
+
+              <div
     style="display: none; position: fixed; background: white; width: 100%"
     id="999"
   >
@@ -40,16 +39,14 @@
             padding: 2px 14px;
             margin: 8px;
           "
-          to="/new-account"
+          to="/connection"
         >
-          Créer un compte
+          Connection
         </router-link>
       </div>
     </div>
   </div>
               
-
-
  <!--Head Block (Space)--->
 <div class="head-block"></div>
 
@@ -59,7 +56,7 @@
 import $ from "jquery";
 
 export default {
-  name: "MenuInscription",
+  name: "MenuConnection",
   mounted() {
     $(".navbar-toggler").on("click", () => {
       $("#999").slideToggle();
