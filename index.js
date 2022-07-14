@@ -23,12 +23,15 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/', express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
+app.use('/api', express.static(__dirname + '/dist'));
 app.use('/upload', express.static(__dirname + '/upload'));
 
 
-app.use('/save-devis', require('./routes/user.routes'));
-app.post('/save-facture', require('./routes/user.routes'));
 
+app.post('/save-devis', require('./routes/user.routes'));
+app.post('api/save-devis', require('./routes/user.routes'));
+app.post('/save-facture', require('./routes/user.routes'));
 app.post('/save-contrat', require('./routes/user.routes'));
 
 app.get('/*', (req, res) => {
