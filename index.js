@@ -17,7 +17,7 @@ app.use('/', express.static(__dirname + '/dist'));
 app.use('/upload', express.static(__dirname + '/upload'));
 
 
-app.post('/save-devis', require('./routes/user.routes'));
+app.use('/save-devis', require('./routes/user.routes'));
 app.post('/save-facture', require('./routes/user.routes'));
 
 app.post('/save-contrat', require('./routes/user.routes'));
