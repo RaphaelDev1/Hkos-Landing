@@ -20,7 +20,7 @@ app.use('/upload', express.static(__dirname + '/upload'));
 app.post('/save-devis', require('./routes/user.routes'));
 app.post('/save-facture', require('./routes/user.routes'));
 
-app.use('/save-contrat', require('./routes/user.routes'));
+app.post('/save-contrat', require('./routes/user.routes'));
 
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/dist/index.html');
