@@ -8,7 +8,7 @@ const exp = require('constants');
 const cors = require('cors');
 
 
-const port = process.env.PORT || 6300
+const port = process.env.PORT || 3000
 
 app.use(express.json());
 app.use(cors());
