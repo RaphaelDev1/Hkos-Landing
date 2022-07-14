@@ -57,7 +57,7 @@
         v-for="row in form.table"
         :key="row"
       >
-        <div class="col-xl-4">
+        <div class="col-xl-4" id="devismainblock">
           <label class="form-label">Description</label>
           <input class="form-control" v-model="row.product" type="text" />
         </div>
@@ -146,7 +146,7 @@
     </div>
   </div>
 
-  <a href="../../../server/output.pdf" download="" v-if="status">Download</a>
+  <a href="/upload/output.pdf" download="" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -177,6 +177,8 @@ class TableRow {
 
 export default {
   name: "DevisBlockGenerateur",
+
+
   props: {
     msg: String,
   },
@@ -198,7 +200,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("http://localhost:6300/save", {
+      let res = await fetch("http://localhost:8000/save-devis", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),
@@ -213,7 +215,7 @@ export default {
   },
   updated() {
     console.log(this.form);
-  },
+  }
 };
 </script>
 

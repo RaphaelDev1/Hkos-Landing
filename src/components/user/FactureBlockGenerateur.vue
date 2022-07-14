@@ -147,7 +147,7 @@
     </div>
   </div>
 
-  <a href="/output.pdf" v-if="status">Download</a>
+  <a href="/upload/output.pdf" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -199,7 +199,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("http://localhost:6300/save", {
+      let res = await fetch("http://localhost:8000/save-facture", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

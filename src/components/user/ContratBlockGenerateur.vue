@@ -9,42 +9,42 @@
 
         <div class="pb-2">
           <label class="form-label">Nom</label>
-          <input class="form-control" v-model="form.contratname" type="text" />
+          <input class="form-control" v-model="form.contratnom" type="text" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Prénom</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratprenom" type="text" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Date de naissance</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratdn" type="date" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Lieu de naissance</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratln" type="text" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Adresse</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratadresse" type="text" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">N° Sécurité sociale</label>
-          <input class="form-control" type="number" />
+          <input class="form-control" v-model="form.contratss" type="number" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">N° CNI ou Sejour</label>
-          <input class="form-control" type="number" />
+          <input class="form-control" v-model="form.contratcni" type="number" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Date de validité CNI</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratdcni" type="date" />
         </div>
       </div>
 
@@ -53,41 +53,41 @@
 
         <div class="pb-2">
           <label class="form-label">Nombre d'heures par semaine</label>
-          <input class="form-control" type="number" />
+          <input class="form-control" v-model="form.contraths" type="number" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Salaire brut</label>
-          <input class="form-control" type="number" />
+          <input class="form-control" v-model="form.contratsb" type="number" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Grade embauche</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratgrade" type="text" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Titre de post</label>
-          <input class="form-control" type="text" />
+          <input class="form-control" v-model="form.contratpost" type="text" />
         </div>
 
          <div class="pb-2">
           <label class="form-label">Date de demarrage</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratdemarrage" type="date" />
         </div>
 
          <div class="pb-2">
           <label class="form-label">Date de fin</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratfin" type="date" />
         </div>
 
         <div class="pb-2">
           <label class="form-label">Date de signature contrat</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratsignature" type="date" />
         </div>
         <div class="pb-2">
           <label class="form-label">Date d'éntrée en fonction</label>
-          <input class="form-control" type="date" />
+          <input class="form-control" v-model="form.contratdatefonction" type="date" />
         </div>
 
         <div class="pb-2">
@@ -109,7 +109,7 @@
 
   </div>
 
-  <a href="/output.pdf" download="" v-if="status">Download</a>
+  <a href="/upload/output.pdf" download="" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -139,13 +139,32 @@ export default {
     return {
       status: false,
       form: {
-        contratname: "",
+        contratnom: "",
+        contratprenom: "",
+        contratatdn:"",
+        contratln: "",
+        contratadresse: "",
+
+        contratss: "",
+        contratcni : "",
+        contratdcni : "",
+        contraths : "",
+        contratsb : "",
+
+        contratgrade : "",
+        contratpost : "",
+        contratdemarrage : "",
+        contratfin : "",
+        contratsignature : "",
+
+        contratdatefonction : "",
+
       },
     };
   },
   methods: {
     async sendForm() {
-      let res = await fetch("http://localhost:6300/save-doc", {
+      let res = await fetch("http://localhost:8000/save-contrat", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),
