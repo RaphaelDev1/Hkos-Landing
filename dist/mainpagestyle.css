@@ -1,0 +1,424 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+img{
+    border-radius: 15px;
+}
+
+/* Inscription CSS + User */
+
+.menumain2{
+    background-color: rgb(50, 141, 245);
+    color: black;
+}
+
+.menumain2 ul li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 18px;
+    background-color: none;
+    font-weight: 300;
+    
+}
+.menumain2 ul li a:hover{
+    color: #3723eb;
+    text-decoration: underline;
+}
+
+
+/* Devis CSS */
+
+.main-block10{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.head-block2
+{
+height: 50px;
+
+}
+
+.heading-info2{
+
+    display: flex;
+    align-items: end;
+    
+    }
+
+.paragraphe-info2{
+    margin-top: 30px;
+
+}
+.text11{
+    font-size: 20px;
+}
+
+.text12{
+    font-size: 18px;
+    font-weight: 300;
+}
+.text13{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(50, 141, 245);
+}
+.text15{
+    font-size: 26px;
+    font-weight: 300;
+
+}
+
+.main-block1d{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+.devistext1{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.devistext2{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(50, 141, 245); ;
+}
+
+.btndevis{
+    letter-spacing: 0.025em;
+    font-size: 12px ;
+    color: rgb(50, 141, 245);
+    font-weight: 300;
+    width: 200px;
+
+}
+
+.btndeviscontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.devisline{
+    display: flex;
+}
+.devislineblock{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Generateur CSS */
+
+.devisGenerateur{
+    display:flex;
+  }
+
+.devisGenerateurLeft{
+    width: 50%;
+}
+
+.devisGenerateurRight{
+    width: 50%;
+
+}
+
+/* Landing CSS */
+
+.menumain{
+    background-color: white;
+    color: black;
+}
+
+.menumain ul li a{
+    color: black;
+    text-decoration: none;
+    margin-right: 12px;
+    
+}
+.menumain ul li a:hover{
+    color: #007490;
+    text-decoration: underline;
+}
+
+.menulink{
+
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: inherit;
+    height: inherit;
+
+}
+.menulink:hover{
+
+    color: #007490;
+    text-decoration: underline;
+
+}
+
+
+
+.menulogo{
+    width:100px;
+    margin-left: 15px;
+}
+
+.logoinscription{
+    width: 200px;
+}
+.menuul{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.btn2{
+    letter-spacing: 0.025em;
+    font-size: 12px ;
+}
+
+.footerlink{
+    font-size: 17px;
+    font-weight: 300;
+    margin: 5px 0;
+    text-decoration:none;
+    color: black;
+
+}
+.footerlink:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.pagecontainer{
+    width: 100%;
+    margin: auto;
+}
+
+.text1{
+    font-size: 49px;
+}
+
+.text2{
+    font-size: 38px;
+}
+.text3{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.text4{
+    font-weight: 700;
+}
+
+.text5{
+    font-size: 26px;
+
+}
+
+.text6{
+    font-size: 77px;
+    font-weight: 300;
+
+}
+
+.span1{
+    color: #2d03a0;
+}
+
+.textblock1{
+    margin: 10px ;
+
+}
+
+.textblock2{
+    margin: 16px 60px 50px;
+
+}
+
+.head-block 
+{
+height: 100px;
+
+}
+.main-block1{
+
+    width: 100%;
+    display: flex;
+
+}
+
+.main-block1l{
+    width: 50%;
+    margin-bottom: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+
+}
+
+.main-block1r{
+    width: 50%;
+    margin: 125px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.main-block1r img{
+    width: 568px;
+}
+
+.heading-info{
+
+display: flex;
+align-items: end;
+
+}
+
+.paragraphe-info{
+    margin: 20px 0;
+
+}
+
+.btn1-container{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+
+.main-block2{
+    margin: 100px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-block3{  
+    margin-bottom: 100px;  
+}
+
+.main-block4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-block4 img{
+    width: 900px;
+    margin-bottom: 100px;
+}
+
+.line1{
+    width: 100%;
+    height: 1px;
+}
+
+.main-block5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-block5 img{
+    width: 150px ;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.main-block6{
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.separatedl{
+    margin: 75px 0;
+}
+
+.logocontainer{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 50px;
+}
+
+.logocontainer img{
+    width: 100px;
+    height: 38px;
+}
+
+.copyrightcontainer{
+    margin-left: 50px;
+    color: grey;
+}
+
+.priceContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.priceContainer2{
+    background-color: #39a2f2;
+    width: 368px;
+    height: 260px;
+    color: white;
+    margin: 48px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.priceContainer3{
+    padding: 15px;
+    width: 368px;
+    background-color: rgba(244, 242, 242, 0.516);
+    color: black ;
+    font-size: 17px;
+    font-weight: 300;
+    border-radius: 15px;
+
+}
+
+.priceContainer3 i{
+    color: #39a2f2;
+    margin: 0px 5px;
+}
+
+.bluecontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions-block p{
+    margin: 30px 0 10px 0;
+}
+
