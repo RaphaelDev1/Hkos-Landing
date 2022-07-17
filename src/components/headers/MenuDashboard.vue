@@ -64,18 +64,18 @@
   </nav>
 
   <div
-    style="display: none; position: fixed; background: white; width: 100%"
+    style="display: none; position: fixed; background: white !important; width: 100%"
     id="999"
   >
-    <div class="d-flex flex-column sticky-top">
+    <div class="d-flex flex-column sticky-top" >
       <div class="p-2 d-flex justify-content-center border-top">
         <router-link to="/dashboard" class="menulink"
           >Tableau de bord</router-link
         >
       </div>
 
-      <div class="d-flex justify-content-center border-top p-2">
-        <router-link to="/devis" class="menulink">Devis</router-link>
+      <div class="d-flex justify-content-center border-top p-2" style="background: white !important ">
+        <router-link to="/devis" class="menulink" >Devis</router-link>
       </div>
 
        <div class="d-flex justify-content-center border-top p-2">
@@ -108,7 +108,7 @@
             margin: 8px;
             border: 1px solid black;
           "
-          to="/newaccount"
+          to="/"
         >
          Déconnexion</router-link
         >

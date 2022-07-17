@@ -7,7 +7,7 @@
                     <div class="heading-info2"><h1 class="text11">Votre entreprise</h1></div>
                     <div class="paragraphe-info2"><p class="text12">Derniers devis</p></div>
 
-                    <hr>
+                    <hr >
 
                     <div><p class="text13">XXX-XXX-XXX-XXX</p></div>
 

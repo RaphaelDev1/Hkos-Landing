@@ -164,7 +164,7 @@ export default {
   },
   methods: {
     async sendForm() {
-      let res = await fetch("http://localhost:8000/save-contrat", {
+      let res = await fetch("https://hkos-back.herokuapp/save-facture", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

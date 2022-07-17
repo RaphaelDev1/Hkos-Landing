@@ -30,7 +30,6 @@
           <input class="form-control" v-model="form.facturedate" type="date" />
         </div>
 
-
         <div class="pb-2">
           <label class="form-label">Date limite de réglement </label>
           <input class="form-control" v-model="form.limitedate" type="date" />
@@ -199,7 +198,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("http://localhost:8000/save-facture", {
+      let res = await fetch("https://hkos-back.herokuapp/save-facture", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

@@ -200,7 +200,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("http://localhost:8000/save-devis", {
+      let res = await fetch("https://hkos-back.herokuapp/save-devis", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),
