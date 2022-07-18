@@ -146,7 +146,7 @@
     </div>
   </div>
 
-  <a href="/upload/output.pdf" download="" v-if="status">Download</a>
+     <a href="http://localhost:3000/download" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -161,6 +161,8 @@
     >
       Générer mon devis
     </button>
+
+  
   </div>
 </template>
 
@@ -200,7 +202,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("https://hkos-back.herokuapp/save-devis", {
+      let res = await fetch("http://localhost:3000/save-devis", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

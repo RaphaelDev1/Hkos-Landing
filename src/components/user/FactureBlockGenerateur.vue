@@ -20,7 +20,6 @@
             class="form-control"
             v-model="form.facturenum"
             type="number"
-            readonly="readonly"
             placeholder="1"
           />
         </div>
@@ -146,7 +145,7 @@
     </div>
   </div>
 
-  <a href="/upload/output.pdf" v-if="status">Download</a>
+   <a href="http://hkos-back.herokuapp.com/download" v-if="status">Download</a>
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
@@ -161,6 +160,8 @@
     >
       Générer ma facture
     </button>
+
+    
   </div>
 </template>
 
@@ -198,7 +199,7 @@ export default {
       this.form.table.push(new TableRow());
     },
     async sendForm() {
-      let res = await fetch("https://hkos-back.herokuapp/save-facture", {
+      let res = await fetch("http://hkos-back.herokuapp.com/save-facture", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),

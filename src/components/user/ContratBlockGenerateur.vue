@@ -109,10 +109,13 @@
 
   </div>
 
-  <a href="/upload/output.pdf" download="" v-if="status">Download</a>
+   <a href="http://localhost:3000/download" v-if="status">Download</a>
+
+
 
   <div class="d-flex justify-content-center m-4" v-else>
     <button
+  
       class="btn btn2"
       style="
         background-color: rgb(50, 141, 245);
@@ -122,8 +125,10 @@
       "
       @click="sendForm"
     >
-      Generer mon devis
+      Generer mon contrat
     </button>
+
+  
   </div>
 </template>
 
@@ -164,7 +169,7 @@ export default {
   },
   methods: {
     async sendForm() {
-      let res = await fetch("https://hkos-back.herokuapp/save-facture", {
+      let res = await fetch("http://localhost:3000/save-contrat", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(this.form),
